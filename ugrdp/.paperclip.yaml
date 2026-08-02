@@ -4,32 +4,32 @@ agents:
     adapter:
       type: opencode_local
       config:
-        model: claude-opus-4-6
+        model: opencode/mimo-v2.5-free
   product-manager:
     adapter:
       type: opencode_local
       config:
-        model: claude-opus-4-6
+        model: opencode/mimo-v2.5-free
   cto:
     adapter:
       type: opencode_local
       config:
-        model: claude-opus-4-6
+        model: opencode/mimo-v2.5-free
   engineering-manager:
     adapter:
       type: opencode_local
       config:
-        model: claude-sonnet-4-6
+        model: opencode/nemotron-3-ultra-free
   qa-lead:
     adapter:
       type: opencode_local
       config:
-        model: claude-sonnet-4-6
+        model: opencode/nemotron-3-ultra-free
   go-backend-engineer:
     adapter:
       type: opencode_local
       config:
-        model: claude-sonnet-4-6
+        model: opencode/nemotron-3-ultra-free
     inputs:
       env:
         STRIPE_SECRET_KEY:
@@ -45,12 +45,12 @@ agents:
     adapter:
       type: opencode_local
       config:
-        model: claude-sonnet-4-6
+        model: opencode/nemotron-3-ultra-free
   devops-infra-engineer:
     adapter:
       type: opencode_local
       config:
-        model: claude-sonnet-4-6
+        model: opencode/nemotron-3-ultra-free
     inputs:
       env:
         SMTP_PASSWORD:
@@ -63,7 +63,7 @@ agents:
     adapter:
       type: opencode_local
       config:
-        model: claude-sonnet-4-6
+        model: opencode/nemotron-3-ultra-free
     inputs:
       env:
         POSTGRES_PASSWORD:
@@ -73,32 +73,32 @@ agents:
     adapter:
       type: opencode_local
       config:
-        model: claude-sonnet-4-6
+        model: opencode/nemotron-3-ultra-free
   security-auditor:
     adapter:
       type: opencode_local
       config:
-        model: claude-sonnet-4-6
+        model: opencode/nemotron-3-ultra-free
   abuse-threat-engineer:
     adapter:
       type: opencode_local
       config:
-        model: claude-sonnet-4-6
+        model: opencode/nemotron-3-ultra-free
   test-engineer:
     adapter:
       type: opencode_local
       config:
-        model: claude-sonnet-4-6
+        model: opencode/nemotron-3-ultra-free
   web-performance-auditor:
     adapter:
       type: opencode_local
       config:
-        model: claude-sonnet-4-6
+        model: opencode/nemotron-3-ultra-free
   release-engineer:
     adapter:
       type: opencode_local
       config:
-        model: claude-haiku-4-5-20251001
+        model: opencode/nemotron-3-ultra-free
     inputs:
       env:
         GH_TOKEN:
