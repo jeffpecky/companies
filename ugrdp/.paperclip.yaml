@@ -2,32 +2,32 @@ schema: paperclip/v1
 agents:
   ceo:
     adapter:
-      type: opencode
+      type: opencode_local
       config:
         model: claude-opus-4-6
   product-manager:
     adapter:
-      type: opencode
+      type: opencode_local
       config:
         model: claude-opus-4-6
   cto:
     adapter:
-      type: opencode
+      type: opencode_local
       config:
         model: claude-opus-4-6
   engineering-manager:
     adapter:
-      type: opencode
+      type: opencode_local
       config:
         model: claude-sonnet-4-6
   qa-lead:
     adapter:
-      type: opencode
+      type: opencode_local
       config:
         model: claude-sonnet-4-6
   go-backend-engineer:
     adapter:
-      type: opencode
+      type: opencode_local
       config:
         model: claude-sonnet-4-6
     inputs:
@@ -43,12 +43,12 @@ agents:
           requirement: optional
   react-frontend-engineer:
     adapter:
-      type: opencode
+      type: opencode_local
       config:
         model: claude-sonnet-4-6
   devops-infra-engineer:
     adapter:
-      type: opencode
+      type: opencode_local
       config:
         model: claude-sonnet-4-6
     inputs:
@@ -61,7 +61,7 @@ agents:
           requirement: optional
   database-engineer:
     adapter:
-      type: opencode
+      type: opencode_local
       config:
         model: claude-sonnet-4-6
     inputs:
@@ -71,32 +71,32 @@ agents:
           requirement: optional
   code-reviewer:
     adapter:
-      type: opencode
+      type: opencode_local
       config:
         model: claude-sonnet-4-6
   security-auditor:
     adapter:
-      type: opencode
+      type: opencode_local
       config:
         model: claude-sonnet-4-6
   abuse-threat-engineer:
     adapter:
-      type: opencode
+      type: opencode_local
       config:
         model: claude-sonnet-4-6
   test-engineer:
     adapter:
-      type: opencode
+      type: opencode_local
       config:
         model: claude-sonnet-4-6
   web-performance-auditor:
     adapter:
-      type: opencode
+      type: opencode_local
       config:
         model: claude-sonnet-4-6
   release-engineer:
     adapter:
-      type: opencode
+      type: opencode_local
       config:
         model: claude-haiku-4-5-20251001
     inputs:
