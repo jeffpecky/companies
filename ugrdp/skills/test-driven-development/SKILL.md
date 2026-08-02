@@ -5,6 +5,7 @@ metadata:
   sources:
     - kind: github-file
       repo: addyosmani/agent-skills
+      commit: 7829ffd90d973b6325f5f12f1b1226dcace74443
       path: skills/test-driven-development/SKILL.md
 ---
 
