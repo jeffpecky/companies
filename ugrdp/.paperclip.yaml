@@ -1,0 +1,106 @@
+schema: paperclip/v1
+agents:
+  ceo:
+    adapter:
+      type: claude_local
+      config:
+        model: claude-opus-4-6
+  product-manager:
+    adapter:
+      type: claude_local
+      config:
+        model: claude-opus-4-6
+  cto:
+    adapter:
+      type: claude_local
+      config:
+        model: claude-opus-4-6
+  engineering-manager:
+    adapter:
+      type: claude_local
+      config:
+        model: claude-sonnet-4-6
+  qa-lead:
+    adapter:
+      type: claude_local
+      config:
+        model: claude-sonnet-4-6
+  go-backend-engineer:
+    adapter:
+      type: claude_local
+      config:
+        model: claude-sonnet-4-6
+    inputs:
+      env:
+        STRIPE_SECRET_KEY:
+          kind: secret
+          requirement: optional
+        POSTGRES_PASSWORD:
+          kind: secret
+          requirement: optional
+        AGENT_SHARED_SECRET:
+          kind: secret
+          requirement: optional
+  react-frontend-engineer:
+    adapter:
+      type: claude_local
+      config:
+        model: claude-sonnet-4-6
+  devops-infra-engineer:
+    adapter:
+      type: claude_local
+      config:
+        model: claude-sonnet-4-6
+    inputs:
+      env:
+        SMTP_PASSWORD:
+          kind: secret
+          requirement: optional
+        AGENT_SHARED_SECRET:
+          kind: secret
+          requirement: optional
+  database-engineer:
+    adapter:
+      type: claude_local
+      config:
+        model: claude-sonnet-4-6
+    inputs:
+      env:
+        POSTGRES_PASSWORD:
+          kind: secret
+          requirement: optional
+  code-reviewer:
+    adapter:
+      type: claude_local
+      config:
+        model: claude-sonnet-4-6
+  security-auditor:
+    adapter:
+      type: claude_local
+      config:
+        model: claude-sonnet-4-6
+  abuse-threat-engineer:
+    adapter:
+      type: claude_local
+      config:
+        model: claude-sonnet-4-6
+  test-engineer:
+    adapter:
+      type: claude_local
+      config:
+        model: claude-sonnet-4-6
+  web-performance-auditor:
+    adapter:
+      type: claude_local
+      config:
+        model: claude-sonnet-4-6
+  release-engineer:
+    adapter:
+      type: claude_local
+      config:
+        model: claude-haiku-4-5-20251001
+    inputs:
+      env:
+        GH_TOKEN:
+          kind: secret
+          requirement: optional
