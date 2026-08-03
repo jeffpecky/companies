@@ -5,31 +5,49 @@ agents:
       type: opencode_local
       config:
         model: opencode/mimo-v2.5-free
+        dangerouslySkipPermissions: true
+        timeoutSec: 300
+        graceSec: 15
   product-manager:
     adapter:
       type: opencode_local
       config:
         model: opencode/mimo-v2.5-free
+        dangerouslySkipPermissions: true
+        timeoutSec: 300
+        graceSec: 15
   cto:
     adapter:
       type: opencode_local
       config:
         model: opencode/mimo-v2.5-free
+        dangerouslySkipPermissions: true
+        timeoutSec: 300
+        graceSec: 15
   engineering-manager:
     adapter:
       type: opencode_local
       config:
         model: opencode/nemotron-3-ultra-free
+        dangerouslySkipPermissions: true
+        timeoutSec: 300
+        graceSec: 15
   qa-lead:
     adapter:
       type: opencode_local
       config:
         model: opencode/nemotron-3-ultra-free
+        dangerouslySkipPermissions: true
+        timeoutSec: 300
+        graceSec: 15
   go-backend-engineer:
     adapter:
       type: opencode_local
       config:
         model: opencode/nemotron-3-ultra-free
+        dangerouslySkipPermissions: true
+        timeoutSec: 300
+        graceSec: 15
     inputs:
       env:
         STRIPE_SECRET_KEY:
@@ -46,11 +64,17 @@ agents:
       type: opencode_local
       config:
         model: opencode/nemotron-3-ultra-free
+        dangerouslySkipPermissions: true
+        timeoutSec: 300
+        graceSec: 15
   devops-infra-engineer:
     adapter:
       type: opencode_local
       config:
         model: opencode/nemotron-3-ultra-free
+        dangerouslySkipPermissions: true
+        timeoutSec: 300
+        graceSec: 15
     inputs:
       env:
         SMTP_PASSWORD:
@@ -64,6 +88,9 @@ agents:
       type: opencode_local
       config:
         model: opencode/nemotron-3-ultra-free
+        dangerouslySkipPermissions: true
+        timeoutSec: 300
+        graceSec: 15
     inputs:
       env:
         POSTGRES_PASSWORD:
@@ -74,31 +101,49 @@ agents:
       type: opencode_local
       config:
         model: opencode/nemotron-3-ultra-free
+        dangerouslySkipPermissions: true
+        timeoutSec: 300
+        graceSec: 15
   security-auditor:
     adapter:
       type: opencode_local
       config:
         model: opencode/nemotron-3-ultra-free
+        dangerouslySkipPermissions: true
+        timeoutSec: 300
+        graceSec: 15
   abuse-threat-engineer:
     adapter:
       type: opencode_local
       config:
         model: opencode/nemotron-3-ultra-free
+        dangerouslySkipPermissions: true
+        timeoutSec: 300
+        graceSec: 15
   test-engineer:
     adapter:
       type: opencode_local
       config:
         model: opencode/nemotron-3-ultra-free
+        dangerouslySkipPermissions: true
+        timeoutSec: 300
+        graceSec: 15
   web-performance-auditor:
     adapter:
       type: opencode_local
       config:
         model: opencode/nemotron-3-ultra-free
+        dangerouslySkipPermissions: true
+        timeoutSec: 300
+        graceSec: 15
   release-engineer:
     adapter:
       type: opencode_local
       config:
         model: opencode/nemotron-3-ultra-free
+        dangerouslySkipPermissions: true
+        timeoutSec: 300
+        graceSec: 15
     inputs:
       env:
         GH_TOKEN:
