@@ -64,14 +64,28 @@ All skills are sourced from [agent-skills](https://github.com/addyosmani/agent-s
 
 ## How Work Flows
 
-1. **User** submits a feature request, bug report, or incident report to **CEO**.
-2. **CEO** assigns to **Product Manager** for product discovery and spec creation.
-3. **Product Manager** brainstorms with user (`interview-me`, `idea-refine`), writes spec (`spec-driven-development`) and task breakdown (`planning-and-task-breakdown`).
-4. **CEO** reviews and approves the business spec.
-5. **CTO** reviews the spec for technical architecture, verifies dependency safety (`govulncheck`, `npm audit`), locks system boundaries, and passes execution plan to **Engineering Manager**.
-6. **Engineering Manager** dispatches tasks to specialist engineers by domain tag (`[go-backend]`, `[react-frontend]`, `[devops-infra]`, `[database]`).
-7. **Engineers** implement code following TDD (`test-driven-development`, `incremental-implementation`) and report completion to **Engineering Manager**.
-8. **Engineering Manager** hands completed changeset to **QA Lead**.
-9. **QA Lead** dispatches 5 review agents in parallel (`code-reviewer`, `security-auditor`, `abuse-threat-engineer`, `test-engineer`, `web-performance-auditor`).
-10. If issues: **QA Lead** → **Engineering Manager** → engineers fix → re-review.
-11. If approved: **QA Lead** → **Release Engineer** → verify build/tests (`shipping-and-launch`) → merge → report to **CEO**.
+Work follows a 5-stage pipeline (Discovery -> Architecture -> Execution -> Audit -> Release) with two hub-and-spoke sub-clusters (EM hub for execution and QA Lead hub for audit):
+
+1. **Stage 1: Discovery & Specification**
+   - **User / Board** submits request to **CEO**.
+   - **Product Manager** conducts discovery (`interview-me`, `idea-refine`), writes design spec (`spec-driven-development`), and task breakdown (`planning-and-task-breakdown`).
+   - **Gate 1:** **CEO** reviews and approves business alignment.
+
+2. **Stage 2: Architecture & Technical Lock**
+   - **CTO** reviews system boundaries, validates dependency health (`govulncheck`, `npm audit`), locks APIs (`api-and-interface-design`), and approves execution strategy.
+   - **Gate 2:** **CTO** hands off execution package to **Engineering Manager**.
+
+3. **Stage 3: Engineering Execution (EM Hub-and-Spoke Sub-cluster)**
+   - **Hub:** **Engineering Manager** dispatches domain-tagged tasks (`[go-backend]`, `[react-frontend]`, `[devops-infra]`, `[database]`) to specialist engineers operating in parallel worktrees.
+   - **Spokes:** **Go Backend Engineer**, **React Frontend Engineer**, **DevOps/Infra Engineer**, **Database Engineer** implement code using TDD (`test-driven-development`, `incremental-implementation`).
+   - **Gate 3:** Engineers return clean build outputs to **Engineering Manager**, who hands off the changeset to **QA Lead**.
+
+4. **Stage 4: QA Audit & Security Verification (QA Lead Hub-and-Spoke Sub-cluster)**
+   - **Hub:** **QA Lead** receives changeset from Engineering Manager and dispatches 5 concurrent review subagents.
+   - **Spokes:** **Code Reviewer** (`code-reviewer`), **Security Auditor** (`security-auditor`), **Abuse & Threat Response Engineer** (`abuse-threat-engineer`), **Test Engineer** (`test-engineer`), and **Web Performance Auditor** (`web-performance-auditor`).
+   - **Feedback Loop:** If any auditor blocks, **QA Lead** routes remediation back to **Engineering Manager**.
+   - **Gate 4:** All 5 QA spokes approve; **QA Lead** signs off and passes to **Release Engineer**.
+
+5. **Stage 5: Release & Deployment**
+   - **Release Engineer** verifies final build, executes release checklist (`shipping-and-launch`), merges code, and deploys.
+   - **Final Handoff:** **Release Engineer** notifies **CEO** upon completion.
